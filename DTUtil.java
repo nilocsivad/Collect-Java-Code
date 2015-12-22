@@ -1,8 +1,3 @@
-/**
- * 
- */
-package com.iam_vip.java_applet.rs.u;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,7 +9,7 @@ public class DTUtil {
 	/**
 	 * 
 	 */
-	public DTUtil() {}
+	private DTUtil() {}
 	
 	
 	public static final String	FMT_DEFAULT		= "yyyy-MM-dd HH:mm:ss";
