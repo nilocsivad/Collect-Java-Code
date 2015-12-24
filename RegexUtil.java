@@ -12,7 +12,7 @@ public class RegexUtil {
 	
 	/**
 	 * 
-	 * @param txt
+	 * @param txt "520"
 	 * @return
 	 */
 	public static boolean isInteger( String txt ) {
@@ -20,11 +20,14 @@ public class RegexUtil {
 		return Pattern.matches( "\\d*", txt );
 	}
 	
-	public static void main( String[] args ) {
+	/**
+	 * 
+	 * @param txt "1,2,3,4"
+	 * @return
+	 */
+	public static boolean isIntegerString( String txt ) {
 		
-		System.out.println( isInteger( "233" ) );
-		System.out.println( isInteger( "23b" ) );
-		System.out.println( isInteger( "23x" ) );
+		return Pattern.matches( "\\d*|(\\d*,\\d*)*", txt );
 	}
 	
 }
