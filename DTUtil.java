@@ -6,11 +6,6 @@ import java.util.Date;
  */
 public class DTUtil {
 	
-	/**
-	 * 
-	 */
-	private DTUtil() {}
-	
 	
 	public static final String	FMT_DEFAULT		= "yyyy-MM-dd HH:mm:ss";
 	public static final String	FMT_DATE		= "yyyy-MM-dd";
@@ -19,6 +14,12 @@ public class DTUtil {
 	public static final String	FMT_FILE		= "yyyy-MM-dd_HH-mm-ss";
 												
 												
+	/**
+	 * 
+	 */
+	private DTUtil() {}
+	
+	
 	public static String nowDT() {
 		
 		return formatDT( FMT_DEFAULT );
@@ -41,7 +42,12 @@ public class DTUtil {
 	
 	public static String formatDT( String fmt, Date date ) {
 		
-		return new SimpleDateFormat( fmt ).format( date );
+		return getFmt( fmt ).format( date );
+	}
+	
+	public static DateFormat getFmt( String fmt ) {
+		
+		return new SimpleDateFormat( fmt );
 	}
 	
 }
