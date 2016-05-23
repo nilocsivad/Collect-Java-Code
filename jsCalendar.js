@@ -20,6 +20,7 @@
 			width: 210,
 			maxDay: 0,
 			startDay: "",
+			endDay: "",
 			selectWeek: true,
 			bgColor: "#f0f0f0",
 			dayBgColor: "#e6e6e6",
@@ -114,7 +115,9 @@
 			_day_style["cursor"] = "pointer";
 			for (var i = 1; i <= _md; ++i) {
 				var _full_d = ym + "-" + (i < 10 ? "0" + i : i);
-				if (options.startDay == "" || _full_d >= options.startDay) {
+				var bx = options.startDay == "" || _full_d >= options.startDay;
+				var by = options.endDay == "" || options.endDay >= _full_d;
+				if (bx && by) {
 					var _nd = $("<div>{0}</div>".format(i)).addClass("day").addClass("day-" + _full_d).css(_day_style).attr("date", _full_d).on("click", options.dayClick);
 					_day1.setDate(i);
 					if (_day1.getDay() % 6 == 0) {
@@ -172,6 +175,14 @@
 			if (options.month != null)
 				_day.setMonth(options.month);
 			_day.setHours(12, 0, 0, 0);
+			//
+			if (options.startDay == "") {
+				var _mm = _day.getMonth() + 1;
+				var _mms = _mm <= 9 ? "0" + _mm : _mm;
+				var _dyx = _day.getDate();
+				var _dyy = _dyx <= 9 ? "0" + _dyx : _dyx;
+				options.startDay = _day.getFullYear() + "-" + _mms + "-" + _dyy;
+			}
 			//
 			generate(c1, _day.getFullYear(), _day.getMonth());
 			generate(c2, _day.getFullYear(), _day.getMonth() + 1);
