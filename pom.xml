@@ -9,6 +9,15 @@
 	<url>http://repo.maven.apache.org/maven2</url>
 	<!-- <url>https://mvnrepository.com/artifact/</url> -->
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.springframework.version>3.2.15.RELEASE</org.springframework.version>
+	</properties>
+
+	<build>
+		<finalName>bandV2</finalName>
+	</build>
+
 	<dependencies>
 
 		<dependency>
@@ -181,12 +190,4 @@
 		</dependency>
 
 	</dependencies>
-
-	<properties>
-		<org.springframework.version>3.2.15.RELEASE</org.springframework.version>
-	</properties>
-
-	<build>
-		<finalName>bandV2</finalName>
-	</build>
 </project>
