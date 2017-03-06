@@ -101,7 +101,7 @@ public class VideoFileCutMerge {
 
 	public static void main33(String[] args) throws IOException {
 
-		String sourceVdo = "F:/Downloads/灵书妙探.Castle.S07E04.中英字幕.WEBrip.720X400-YYeTs人人影视.mp4";
+		String sourceVdo = "D:\\CCTV-1.mp4";
 
 		FileInputStream fis = new FileInputStream(sourceVdo);
 
@@ -154,7 +154,7 @@ public class VideoFileCutMerge {
 
 	public static void main22(String[] args) throws IOException {
 
-		String sourceVdo = "F:/Downloads/灵书妙探.Castle.S07E04.中英字幕.WEBrip.720X400-YYeTs人人影视.mp4";
+		String sourceVdo = "D:\\CCTV-1.mp4";
 
 		FileInputStream fis = new FileInputStream(sourceVdo);
 
@@ -183,7 +183,7 @@ public class VideoFileCutMerge {
 
 
 
-		FileOutputStream fos = new FileOutputStream("F:/out.mp4");
+		FileOutputStream fos = new FileOutputStream("D:\\CCTV-1.copy.mp4");
 		fos.write(head);
 		fos.write(body);
 		// fos.write(foot);

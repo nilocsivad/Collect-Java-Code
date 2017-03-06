@@ -24,7 +24,7 @@ public class PDFFileReader {
 	 */
 	public static void main(String[] args) throws IOException {
 
-		String path = "C:/Users/Colin/Downloads/话语攻心术：把话说到对方心坎里--成杰着.pdf";
+		String path = "D:\\adobe-helper.pdf";
 
 		// FileInputStream fis = new FileInputStream(file);
 		File file = new File(path);
