@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" import="com.defence.mp2017.rs.util.ConstUtil"%>
+<%@ page language="java" import="*.ConstUtil"%>
 
 <%!//////////////////////////////////////////////////
 	//////////
